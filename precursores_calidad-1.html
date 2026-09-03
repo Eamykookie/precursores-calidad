@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Página educativa sobre 13 precursores de la calidad, sus filosofías, aportaciones y reconocimientos.">
+<title>Precursores de la Calidad | Ingeniería Industrial</title>
+<style>
+:root{
+  --bg:#f5f7fb; --surface:#ffffff; --text:#172033; --muted:#5e6b82;
+  --primary:#183b70; --primary2:#2866b2; --accent:#e8b84a; --line:#dbe2ee;
+  --shadow:0 12px 30px rgba(20,45,80,.10); --radius:18px;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{color:var(--primary2)}
+.skip{position:absolute;left:-9999px;top:10px;background:#fff;padding:10px;border-radius:8px;z-index:100}
+.skip:focus{left:10px}
+header{background:linear-gradient(135deg,var(--primary),#10284c);color:#fff;padding:70px 20px 55px}
+.hero{max-width:1120px;margin:auto}
+.badge{display:inline-block;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);padding:7px 12px;border-radius:999px;font-size:.88rem}
+h1{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1.05;margin:18px 0 12px}
+.hero p{max-width:780px;font-size:1.08rem;color:#e6edf8}
+nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 3px 14px rgba(0,0,0,.05)}
+.nav-inner{max-width:1120px;margin:auto;display:flex;gap:8px;overflow:auto;padding:9px 14px}
+nav a{text-decoration:none;color:var(--primary);font-weight:700;white-space:nowrap;padding:9px 12px;border-radius:10px}
+nav a:hover,nav a:focus{background:#edf3fb;outline:none}
+main{max-width:1120px;margin:auto;padding:34px 18px 60px}
+section{margin:0 0 58px}
+.section-title{font-size:2rem;color:var(--primary);margin-bottom:8px}
+.lead{color:var(--muted);max-width:850px}
+.intro-grid{display:grid;grid-template-columns:1.4fr .8fr;gap:20px}
+.panel,.card,.timeline-item,.conclusion{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.panel{padding:25px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.stat{background:#eef4fb;border-radius:14px;padding:17px;text-align:center}
+.stat strong{display:block;font-size:1.8rem;color:var(--primary)}
+.searchbox{display:flex;gap:10px;margin:20px 0}
+.searchbox input{flex:1;padding:14px 16px;border:1px solid #bcc8da;border-radius:12px;font-size:1rem}
+.searchbox button{padding:12px 16px;border:0;border-radius:12px;background:var(--primary);color:#fff;font-weight:700;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{padding:22px;display:flex;flex-direction:column;min-height:310px;transition:.2s}
+.card:hover{transform:translateY(-3px)}
+.initial{width:55px;height:55px;border-radius:50%;background:#eaf0f8;color:var(--primary);display:grid;place-items:center;font-weight:800;font-size:1.15rem;margin-bottom:13px}
+.card h3{margin:0 0 4px;color:var(--primary);font-size:1.25rem}
+.years{font-size:.88rem;color:var(--muted);margin-bottom:12px}
+.tag{display:inline-block;background:#f4edd9;color:#74540c;border-radius:999px;padding:4px 9px;font-size:.78rem;font-weight:700;margin:2px 3px 2px 0}
+.card p{margin:9px 0;color:#3e4b60}
+.card .btn{margin-top:auto;background:var(--primary);color:#fff;text-align:center;text-decoration:none;padding:10px 12px;border-radius:10px;font-weight:700}
+.timeline{display:grid;gap:14px}
+.timeline-item{padding:18px 20px;border-left:6px solid var(--primary2)}
+.timeline-item strong{color:var(--primary)}
+.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.detail{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
+.detail h3{color:var(--primary);margin-top:0}
+.detail ul{margin-bottom:0}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+th,td{padding:13px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#edf3fb;color:var(--primary)}
+.biblio li{margin-bottom:12px}
+footer{background:#12243f;color:#dfe8f5;padding:36px 18px}
+.footer-inner{max-width:1120px;margin:auto}
+footer a{color:#fff}
+.note{font-size:.9rem;color:var(--muted)}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.intro-grid,.detail-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.hero{padding:0 3px}header{padding-top:48px}.card{min-height:auto}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido principal</a>
+
+<header>
+  <div class="hero">
+    <span class="badge">Proyecto de Administración de la Calidad</span>
+    <h1>Precursores de la Calidad</h1>
+    <p>Una mirada a 13 pensadores que transformaron la calidad, la estadística, la mejora continua, la manufactura y la gestión empresarial.</p>
+  </div>
+</header>
+
+<nav aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="#inicio">Inicio</a>
+    <a href="#precursores">Precursores</a>
+    <a href="#linea">Línea del tiempo</a>
+    <a href="#comparacion">Comparación</a>
+    <a href="#bibliografia">Bibliografía</a>
+    <a href="#autor">Autoría</a>
+  </div>
+</nav>
+
+<main id="contenido">
+<section id="inicio">
+  <h2 class="section-title">¿Qué es la calidad?</h2>
+  <p class="lead">La calidad puede entenderse como la capacidad de un producto, servicio o proceso para cumplir requisitos y satisfacer las necesidades del cliente. Su evolución pasó de la inspección del producto terminado hacia el control estadístico, la prevención de errores, la mejora continua y la participación de toda la organización.</p>
+  <div class="intro-grid">
+    <div class="panel">
+      <h3>¿Por qué estudiar a sus precursores?</h3>
+      <p>Las ideas de estos especialistas dieron origen o fortalecieron herramientas que actualmente se utilizan en Ingeniería Industrial, como gráficos de control, muestreo de aceptación, Pareto, círculos de calidad, diseño de experimentos, Poka-Yoke, SMED, Just in Time y Kaizen.</p>
+      <p>Su principal enseñanza es que la calidad no depende únicamente de inspeccionar al final: debe construirse y mejorarse desde el diseño, el proceso, las personas y la administración.</p>
+    </div>
+    <div class="panel">
+      <div class="stats">
+        <div class="stat"><strong>13</strong>precursores</div>
+        <div class="stat"><strong>5</strong>enfoques principales</div>
+        <div class="stat"><strong>1</strong>objetivo: mejorar</div>
+      </div>
+      <p class="note">Contenido elaborado con base en fuentes institucionales y académicas indicadas en la bibliografía.</p>
+    </div>
+  </div>
+</section>
+
+<section id="precursores">
+  <h2 class="section-title">Los 13 precursores</h2>
+  <p class="lead">Usa el buscador para localizar a una persona o una aportación.</p>
+  <div class="searchbox">
+    <label for="busqueda" class="skip">Buscar precursor</label>
+    <input id="busqueda" type="search" placeholder="Ejemplo: Deming, Kaizen, control estadístico..." aria-label="Buscar precursor o aportación">
+    <button type="button" onclick="filtrar()">Buscar</button>
+  </div>
+
+  <div class="grid" id="cards">
+    <article class="card" data-search="walter shewhart control chart gráfico control estadístico">
+      <div class="initial">WS</div><h3>Walter A. Shewhart</h3><div class="years">1891–1967</div>
+      <span class="tag">Control estadístico</span><span class="tag">Gráficos de control</span>
+      <p><strong>Filosofía:</strong> controlar la variación del proceso mediante métodos estadísticos y buscar un control económico de la calidad.</p>
+      <p><strong>Aportaciones:</strong> gráfico de control y fundamentos del control estadístico de calidad.</p>
+      <a class="btn" href="#d1">Ver ficha completa</a>
+    </article>
+
+    <article class="card" data-search="w edwards deming 14 puntos mejora continua sistema profundo conocimiento">
+      <div class="initial">WD</div><h3>W. Edwards Deming</h3><div class="years">1900–1993</div>
+      <span class="tag">14 puntos</span><span class="tag">Mejora continua</span>
+      <p><strong>Filosofía:</strong> la calidad se logra transformando el sistema de gestión, reduciendo la variación y mejorando continuamente.</p>
+      <p><strong>Aportaciones:</strong> 14 puntos para la administración, ciclo de mejora y pensamiento sistémico.</p>
+      <a class="btn" href="#d2">Ver ficha completa</a>
+    </article>
+
+    <article class="card" data-search="joseph juran trilogía calidad pareto fitness use">
+      <div class="initial">JJ</div><h3>Joseph M. Juran</h3><div class="years">1904–2008</div>
+      <span class="tag">Trilogía de Juran</span><span class="tag">Pareto</span>
+      <p><strong>Filosofía:</strong> administrar la calidad mediante planificación, control y mejora, con fuerte responsabilidad de la dirección.</p>
+      <p><strong>Aportaciones:</strong> Trilogía de Juran, principio de Pareto y calidad como adecuación al uso.</p>
+      <a class="btn" href="#d3">Ver ficha completa</a>
+    </article>
+
+    <article class="card" data-search="philip crosby cero defectos conformance requirements calidad gratis">
+      <div class="initial">PC</div><h3>Philip B. Crosby</h3><div class="years">1926–2001</div>
+      <span class="tag">Cero defectos</span><span class="tag">Prevención</span>
+      <p><strong>Filosofía:</strong> hacer las cosas correctamente desde la primera vez y prevenir errores en lugar de depender de la inspección.</p>
+      <p><strong>Aportaciones:</strong> cero defectos, conformidad con los requisitos y prevención.</p>
+      <a class="btn" href="#d4">Ver ficha completa</a>
+    </article>
+
+    <article class="card" data-search="kaoru ishikawa diagrama causa efecto espina pescado círculos calidad">
+      <div class="initial">KI</div><h3>Kaoru Ishikawa</h3><div class="years">1915–1989</div>
+      <span class="tag">Círculos de calidad</span><span class="tag">Ishikawa</span>
+      <p><strong>Filosofía:</strong> la calidad requiere participación de toda la organización, educación, liderazgo y enfoque en el cliente.</p>
+      <p><strong>Aportaciones:</strong> diagrama causa-efecto, círculos de calidad y control de calidad en toda la empresa.</p>
+      <a class="btn" href="#d5">Ver ficha completa</a>
+    </article>
+
+    <article class="card" data-search="armand feigenbaum control total calidad costos prevención evaluación fallas">
+      <div class="initial">AF</div><h3>Armand V. Feigenbaum</h3><div class="years">1922–2014</div>
+      <span class="tag">TQC</span><span class="tag">Costos de calidad</span>
+      <p><strong>Filosofía:</strong> la calidad es responsabilidad de todas las áreas y debe integrarse como un sistema total de gestión.</p>
+      <p><strong>Aportaciones:</strong> Total Quality Control y clasificación de costos de prevención, evaluación y fallas.</p>
+      <a class="btn" href="#d6">Ver ficha completa</a>
+    </article>
+
+    <article class="card" data-search="genichi taguchi función pérdida diseño robusto señal ruido experimentos">
+      <div class="initial">GT</div><h3>Genichi Taguchi</h3><div class="years">1924–2012</div>
+      <span class="tag">Diseño robusto</span><span class="tag">Función de pérdida</span>
+      <p><strong>Filosofía:</strong> la calidad debe incorporarse desde el diseño, reduciendo la sensibilidad del producto y proceso a las variaciones.</p>
+      <p><strong>Aportaciones:</strong> métodos Taguchi, diseño de experimentos, relación señal/ruido y función de pérdida.</p>
+      <a class="btn" href="#d7">Ver ficha completa</a>
+    </article>
+
+    <article class="card" data-search="shigeo shingo smed poka yoke cero control calidad inspección fuente">
+      <div class="initial">SS</div><h3>Shigeo Shingo</h3><div class="years">1909–1990</div>
+      <span class="tag">Poka-Yoke</span><span class="tag">SMED</span>
+      <p><strong>Filosofía:</strong> prevenir errores en la fuente y diseñar procesos que hagan difícil o imposible producir un defecto.</p>
+      <p><strong>Aportaciones:</strong> Poka-Yoke, SMED, inspección en la fuente y Zero Quality Control.</p>
+      <a class="btn" href="#d8">Ver ficha completa</a>
+    </article>
+
+    <article class="card" data-search="taiichi ohno toyota production system jit just in time jidoka desperdicio muda">
+      <div class="initial">TO</div><h3>Taiichi Ohno</h3><div class="years">1912–1990</div>
+      <span class="tag">TPS</span><span class="tag">JIT</span>
+      <p><strong>Filosofía:</strong> producir lo necesario, cuando se necesita y en la cantidad necesaria, eliminando desperdicios y mejorando el flujo.</p>
+      <p><strong>Aportaciones:</strong> desarrollo del Toyota Production System, Just in Time y eliminación sistemática del desperdicio.</p>
+      <a class="btn" href="#d9">Ver ficha completa</a>
+    </article>
+
+    <article class="card" data-search="masaaki imai kaizen mejora continua gemba">
+      <div class="initial">MI</div><h3>Masaaki Imai</h3><div class="years">1930–2023</div>
+      <span class="tag">Kaizen</span><span class="tag">Gemba</span>
+      <p><strong>Filosofía:</strong> mejorar continuamente mediante cambios pequeños y sostenidos, involucrando a las personas de todos los niveles.</p>
+      <p><strong>Aportaciones:</strong> difusión internacional del Kaizen y enfoque de mejora continua en el lugar de trabajo.</p>
+      <a class="btn" href="#d10">Ver ficha completa</a>
+    </article>
+
+    <article class="card" data-search="dorian shainin red x statistical engineering resolución problemas">
+      <div class="initial">DS</div><h3>Dorian Shainin</h3><div class="years">1914–2000</div>
+      <span class="tag">Red X</span><span class="tag">Ingeniería estadística</span>
+      <p><strong>Filosofía:</strong> los problemas complejos pueden resolverse encontrando la causa dominante de la variación mediante métodos prácticos y datos.</p>
+      <p><strong>Aportaciones:</strong> Shainin System, Red X y herramientas de ingeniería estadística para resolución de problemas.</p>
+      <a class="btn" href="#d11">Ver ficha completa</a>
+    </article>
+
+    <article class="card" data-search="harold dodge muestreo aceptación riesgo consumidor productor dodge romig">
+      <div class="initial">HD</div><h3>Harold F. Dodge</h3><div class="years">1893–1976</div>
+      <span class="tag">Muestreo</span><span class="tag">Inspección</span>
+      <p><strong>Filosofía:</strong> la inspección puede apoyarse en métodos estadísticos simples que controlen los riesgos del productor y del consumidor.</p>
+      <p><strong>Aportaciones:</strong> planes de muestreo de aceptación y tablas Dodge-Romig.</p>
+      <a class="btn" href="#d12">Ver ficha completa</a>
+    </article>
+
+    <article class="card" data-search="eugene grant statistical quality control control estadístico educación">
+      <div class="initial">EG</div><h3>Eugene L. Grant</h3><div class="years">1897–1996</div>
+      <span class="tag">Control estadístico</span><span class="tag">Educación</span>
+      <p><strong>Filosofía:</strong> los métodos estadísticos deben enseñarse de forma clara y práctica para que puedan aplicarse en la industria.</p>
+      <p><strong>Aportaciones:</strong> difusión del control estadístico mediante su libro <em>Statistical Quality Control</em> y formación profesional.</p>
+      <a class="btn" href="#d13">Ver ficha completa</a>
+    </article>
+  </div>
+  <p id="sin-resultados" class="note" hidden>No se encontraron resultados. Prueba con otro nombre o concepto.</p>
+</section>
+
+<section id="linea">
+  <h2 class="section-title">Línea del tiempo de la calidad</h2>
+  <div class="timeline">
+    <div class="timeline-item"><strong>1924 — Shewhart:</strong> propone el gráfico de control en Bell Laboratories.</div>
+    <div class="timeline-item"><strong>1931 — Shewhart:</strong> publica <em>Economic Control of Quality of Manufactured Product</em>.</div>
+    <div class="timeline-item"><strong>1940s — Dodge y Grant:</strong> se consolidan herramientas de muestreo y educación en control estadístico.</div>
+    <div class="timeline-item"><strong>1950s — Deming y Juran:</strong> sus enseñanzas influyen fuertemente en la transformación de la gestión de calidad en Japón.</div>
+    <div class="timeline-item"><strong>1950s–1960s — Feigenbaum e Ishikawa:</strong> se amplía la calidad hacia toda la empresa y la participación de los trabajadores.</div>
+    <div class="timeline-item"><strong>1960s–1970s — Taguchi:</strong> desarrolla y difunde métodos de ingeniería de calidad y diseño experimental.</div>
+    <div class="timeline-item"><strong>1960s–1980s — Shingo y Ohno:</strong> se fortalecen Poka-Yoke, SMED, JIT y el Toyota Production System.</div>
+    <div class="timeline-item"><strong>1980s–1990s — Imai y Shainin:</strong> Kaizen y la ingeniería estadística llevan la mejora continua y la solución estructurada de problemas a más organizaciones.</div>
+  </div>
+</section>
+
+<section id="comparacion">
+  <h2 class="section-title">Comparación de enfoques</h2>
+  <table>
+    <thead><tr><th>Precursor</th><th>Enfoque principal</th><th>Concepto clave</th></tr></thead>
+    <tbody>
+      <tr><td>Shewhart</td><td>Variación del proceso</td><td>Gráficos de control</td></tr>
+      <tr><td>Deming</td><td>Gestión y sistema</td><td>14 puntos / mejora continua</td></tr>
+      <tr><td>Juran</td><td>Administración de la calidad</td><td>Trilogía de Juran / Pareto</td></tr>
+      <tr><td>Crosby</td><td>Prevención</td><td>Cero defectos</td></tr>
+      <tr><td>Ishikawa</td><td>Personas y organización</td><td>Círculos / causa-efecto</td></tr>
+      <tr><td>Feigenbaum</td><td>Calidad total</td><td>TQC y costos de calidad</td></tr>
+      <tr><td>Taguchi</td><td>Diseño y robustez</td><td>Función de pérdida</td></tr>
+      <tr><td>Shingo</td><td>Prevención en el proceso</td><td>Poka-Yoke / SMED</td></tr>
+      <tr><td>Ohno</td><td>Flujo y desperdicio</td><td>TPS / JIT</td></tr>
+      <tr><td>Imai</td><td>Mejora continua</td><td>Kaizen</td></tr>
+      <tr><td>Shainin</td><td>Resolución de problemas</td><td>Red X</td></tr>
+      <tr><td>Dodge</td><td>Muestreo</td><td>Riesgo productor/consumidor</td></tr>
+      <tr><td>Grant</td><td>Educación estadística</td><td>Statistical Quality Control</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="fichas">
+  <h2 class="section-title">Fichas completas</h2>
+  <div class="detail-grid">
+    <div class="detail" id="d1"><h3>1. Walter A. Shewhart</h3><p><strong>Biografía:</strong> Estadístico e ingeniero estadounidense. Trabajó en Western Electric y Bell Telephone Laboratories y es reconocido por integrar estadística, ingeniería y economía en el control de calidad.</p><p><strong>Filosofía:</strong> distinguir la variación propia del proceso de las causas especiales y utilizar evidencia estadística para mantener el proceso bajo control económico.</p><p><strong>Principales aportaciones:</strong> gráfico de control; fundamentos del control estadístico de calidad; publicación de <em>Economic Control of Quality of Manufactured Product</em> (1931).</p><p><strong>Premios y reconocimientos:</strong> primer miembro honorario de ASQ; la Shewhart Medal fue nombrada en su honor.</p><p class="note"><strong>Fuente principal: ASQ, perfil de Walter A. Shewhart.</strong></p></div>
+
+    <div class="detail" id="d2"><h3>2. W. Edwards Deming</h3><p><strong>Biografía:</strong> Estadístico estadounidense, doctorado en física por Yale. A partir de 1950 enseñó a directivos e ingenieros japoneses métodos para mejorar procesos y gestión.</p><p><strong>Filosofía:</strong> la mayor parte de los problemas de calidad está relacionada con el sistema; la dirección debe liderar la transformación y promover aprendizaje y mejora continua.</p><p><strong>Principales aportaciones:</strong> 14 puntos para la administración, pensamiento sistémico, énfasis en reducción de variación y mejora continua.</p><p><strong>Premios y reconocimientos:</strong> JUSE creó el Deming Prize en 1951; recibió la Medalla de Segundo Orden del Tesoro Sagrado de Japón en 1960 y la Shewhart Medal de ASQ en 1955.</p><p class="note"><strong>Fuentes principales: The W. Edwards Deming Institute y ASQ.</strong></p></div>
+
+    <div class="detail" id="d3"><h3>3. Joseph M. Juran</h3><p><strong>Biografía:</strong> Ingeniero y especialista en gestión de calidad nacido en Rumania y emigrado a Estados Unidos. Desarrolló una carrera de más de 70 años en ingeniería, enseñanza, consultoría y gestión.</p><p><strong>Filosofía:</strong> la calidad debe administrarse. Su enfoque se resume en planificación de la calidad, control de la calidad y mejora de la calidad.</p><p><strong>Principales aportaciones:</strong> Trilogía de Juran, principio de Pareto aplicado a la gestión y concepto de calidad como “adecuación al uso”.</p><p><strong>Premios y reconocimientos:</strong> más de 30 reconocimientos; entre ellos, la Edwards Medal, Brumbaugh Award y Grant Award de ASQ. Fue miembro honorario de ASQ.</p><p class="note"><strong>Fuentes principales: ASQ y Juran Institute.</strong></p></div>
+
+    <div class="detail" id="d4"><h3>4. Philip B. Crosby</h3><p><strong>Biografía:</strong> Profesional estadounidense de la calidad, consultor y autor. Inició su carrera de calidad en 1952 y en 1979 fundó Philip Crosby Associates.</p><p><strong>Filosofía:</strong> calidad significa conformidad con los requisitos; la prevención es preferible a corregir defectos después y el estándar debe ser cero defectos.</p><p><strong>Principales aportaciones:</strong> concepto de cero defectos, prevención, conformidad con requisitos y difusión de la idea de que la calidad puede ser económicamente conveniente.</p><p><strong>Premios y reconocimientos:</strong> miembro honorario de ASQ; su libro <em>Quality Is Free</em> tuvo gran influencia en la revolución de la calidad.</p><p class="note"><strong>Fuente principal: ASQ, perfil de Philip Crosby.</strong></p></div>
+
+    <div class="detail" id="d5"><h3>5. Kaoru Ishikawa</h3><p><strong>Biografía:</strong> Ingeniero químico japonés que desempeñó un papel central en el desarrollo de una estrategia japonesa de calidad y en la expansión de los círculos de calidad.</p><p><strong>Filosofía:</strong> la calidad involucra a toda la organización y debe considerar al cliente, la educación, la participación de los trabajadores y el apoyo de la alta dirección.</p><p><strong>Principales aportaciones:</strong> diagrama causa-efecto, círculos de calidad, control de calidad en toda la empresa y materiales para capacitar a personas no especialistas en estadística.</p><p><strong>Premios y reconocimientos:</strong> miembro honorario de ASQ en 1986; recibió la Shewhart Medal en 1982. ASQ creó la Ishikawa Medal en su honor.</p><p class="note"><strong>Fuente principal: ASQ, perfil de Kaoru Ishikawa.</strong></p></div>
+
+    <div class="detail" id="d6"><h3>6. Armand V. Feigenbaum</h3><p><strong>Biografía:</strong> Ingeniero y especialista estadounidense que desarrolló durante décadas el concepto de control total de calidad y trabajó en General Electric y posteriormente en General Systems.</p><p><strong>Filosofía:</strong> la calidad no pertenece exclusivamente al departamento de inspección: es un esfuerzo de toda la organización y debe gestionarse como un sistema.</p><p><strong>Principales aportaciones:</strong> Total Quality Control; integración de la calidad con la administración; clasificación de costos de calidad en prevención, evaluación y fallas.</p><p><strong>Premios y reconocimientos:</strong> Edwards Medal de ASQ (1965), primer receptor del Lancaster Award de ASQ, miembro honorario de ASQ (1986), National Security Industrial Association Award of Merit y Founders Medal de Union College. También recibió la National Medal of Technology and Innovation por sus contribuciones tecnológicas.</p><p class="note"><strong>Fuentes principales: ASQ y Feigenbaum Foundation.</strong></p></div>
+
+    <div class="detail" id="d7"><h3>7. Genichi Taguchi</h3><p><strong>Biografía:</strong> Ingeniero y estadístico japonés. Trabajó en el Institute of Statistical Mathematics, Electrical Communication Laboratory y posteriormente como profesor y consultor.</p><p><strong>Filosofía:</strong> la calidad debe diseñarse desde el inicio y no depender únicamente de la inspección. Un producto robusto mantiene su desempeño ante factores de variación.</p><p><strong>Principales aportaciones:</strong> métodos Taguchi, diseño de experimentos, función de pérdida de calidad y optimización mediante relación señal/ruido.</p><p><strong>Premios y reconocimientos:</strong> Deming Prize en 1960; Indigo Ribbon del Emperador de Japón y Willard F. Rockwell Medal en 1986; miembro honorario de ASQ desde 1997.</p><p class="note"><strong>Fuente principal: ASQ, perfil de Genichi Taguchi.</strong></p></div>
+
+    <div class="detail" id="d8"><h3>8. Shigeo Shingo</h3><p><strong>Biografía:</strong> Ingeniero japonés especializado en mejora de operaciones. Trabajó extensamente con empresas japonesas y con ejecutivos de Toyota, especialmente Taiichi Ohno.</p><p><strong>Filosofía:</strong> es mejor prevenir el error en el origen que descubrir el defecto después. El proceso debe diseñarse para facilitar el trabajo correcto.</p><p><strong>Principales aportaciones:</strong> Poka-Yoke, inspección en la fuente, Zero Quality Control, SMED y análisis del flujo de operaciones.</p><p><strong>Premios y reconocimientos:</strong> recibió un doctorado honorario de administración de Utah State University en 1988. El Shingo Prize fue establecido ese mismo año para promover la excelencia organizacional y lleva su nombre.</p><p class="note"><strong>Fuente principal: Shingo Institute; las aportaciones se contrastan además con bibliografía sobre sus obras.</strong></p></div>
+
+    <div class="detail" id="d9"><h3>9. Taiichi Ohno</h3><p><strong>Biografía:</strong> Ingeniero y ejecutivo japonés de Toyota. Desarrolló y desplegó el Toyota Production System durante las décadas posteriores a la Segunda Guerra Mundial.</p><p><strong>Filosofía:</strong> eliminar desperdicio y producir con base en la demanda, buscando alta calidad, bajo costo y tiempos de entrega cortos.</p><p><strong>Principales aportaciones:</strong> desarrollo del TPS, Just in Time, flujo de producción, Kanban y eliminación sistemática del desperdicio.</p><p><strong>Premios y reconocimientos:</strong> Medalla Blue Ribbon en 1973; Distinguished Service Award del Ministerio de Trabajo en 1974; Order of the Rising Sun, Gold Rays with Neck Ribbon en 1982; Automotive Hall of Fame en 2022.</p><p class="note"><strong>Fuentes principales: Toyota Motor Corporation y Automotive Hall of Fame.</strong></p></div>
+
+    <div class="detail" id="d10"><h3>10. Masaaki Imai</h3><p><strong>Biografía:</strong> Consultor y teórico japonés nacido en Tokio. Trabajó en el Japan Productivity Center y en 1985 fundó Kaizen Institute.</p><p><strong>Filosofía:</strong> Kaizen significa mejora continua e involucra a todos, desde trabajadores hasta directivos. Las mejoras pequeñas y constantes forman una cultura de excelencia.</p><p><strong>Principales aportaciones:</strong> introducción del concepto Kaizen al mundo occidental mediante <em>Kaizen: The Key to Japan’s Competitive Success</em> (1986), difusión del enfoque Gemba y mejora continua.</p><p><strong>Premios y reconocimientos:</strong> entre los reconocimientos documentados por Kaizen Institute se encuentran el primer Honorary Fellowship of Quality Control en India (2010) y el BrandLaureate Legendary Award (2019).</p><p class="note"><strong>Fuentes principales: Kaizen Institute.</strong></p></div>
+
+    <div class="detail" id="d11"><h3>11. Dorian Shainin</h3><p><strong>Biografía:</strong> Ingeniero aeronáutico estadounidense que dedicó más de seis décadas a mejorar la solución de problemas industriales. Trabajó con cientos de organizaciones y desarrolló la disciplina de ingeniería estadística.</p><p><strong>Filosofía:</strong> para resolver un problema complejo hay que identificar la causa dominante de la variación y utilizar datos, experimentación y conocimiento del producto.</p><p><strong>Principales aportaciones:</strong> Shainin System, estrategia Red X y más de 20 técnicas estadísticas para calidad, confiabilidad y mejora.</p><p><strong>Premios y reconocimientos:</strong> Brumbaugh Award en 1951, Edwards Medal en 1969, Grant Award en 1981, Shewhart Medal en 1989 y miembro honorario de ASQ en 1995.</p><p class="note"><strong>Fuente principal: ASQ, perfil de Dorian Shainin.</strong></p></div>
+
+    <div class="detail" id="d12"><h3>12. Harold F. Dodge</h3><p><strong>Biografía:</strong> Ingeniero eléctrico estadounidense y uno de los principales arquitectos del control estadístico de calidad. Trabajó en Bell Laboratories durante gran parte de su carrera.</p><p><strong>Filosofía:</strong> los métodos de calidad deben ser científicos, sencillos y útiles; su trabajo buscó controlar los riesgos asociados con aceptar o rechazar lotes.</p><p><strong>Principales aportaciones:</strong> planes de muestreo de aceptación, tablas Dodge-Romig, riesgo del productor, riesgo del consumidor, muestreo doble y otros esquemas.</p><p><strong>Premios y reconocimientos:</strong> ASTM Award of Merit (1950), Shewhart Medal (1949), Grant Award (1972), miembro honorario de ASQ (1965) y Fellow de varias asociaciones estadísticas.</p><p class="note"><strong>Fuente principal: ASQ, perfil de Harold F. Dodge.</strong></p></div>
+
+    <div class="detail" id="d13"><h3>13. Eugene L. Grant</h3><p><strong>Biografía:</strong> Profesor estadounidense de ingeniería industrial y economía de la ingeniería. Desarrolló gran parte de su carrera en Stanford University y fue un importante educador en control estadístico.</p><p><strong>Filosofía:</strong> el conocimiento estadístico debe convertirse en herramientas comprensibles y aplicables por profesionales de la industria.</p><p><strong>Principales aportaciones:</strong> autor de <em>Statistical Quality Control</em> (1946), texto que ayudó a difundir el control estadístico de calidad y llegó a seis ediciones.</p><p><strong>Premios y reconocimientos:</strong> Shewhart Medal en 1952, miembro honorario de ASQ en 1968 y académico honorario de la International Academy for Quality. ASQ creó el Eugene L. Grant Award.</p><p class="note"><strong>Fuente principal: ASQ, perfil de Eugene L. Grant.</strong></p></div>
+  </div>
+</section>
+
+<section id="conclusion">
+  <h2 class="section-title">Conclusión</h2>
+  <div class="conclusion" style="padding:25px">
+    <p>Los precursores de la calidad transformaron la manera de entender y administrar los procesos. Shewhart y Dodge fortalecieron las bases estadísticas; Deming, Juran, Crosby e Ishikawa llevaron la calidad al terreno de la administración, las personas y la prevención; Feigenbaum la convirtió en un sistema integral; Taguchi la llevó al diseño robusto; Shingo y Ohno revolucionaron los procesos productivos; Imai difundió la mejora continua y Shainin desarrolló métodos estructurados para resolver problemas. En conjunto, sus ideas muestran que la calidad es una responsabilidad permanente que requiere datos, liderazgo, prevención, participación y mejora continua.</p>
+  </div>
+</section>
+
+<section id="bibliografia">
+  <h2 class="section-title">Bibliografía — formato APA 7</h2>
+  <ol class="biblio">
+    <li>American Society for Quality. (s. f.). <em>Walter A. Shewhart</em>. ASQ. https://asq.org/about-asq/honorary-members/shewhart</li>
+    <li>American Society for Quality. (s. f.). <em>Joseph M. Juran</em>. ASQ. https://asq.org/about-asq/honorary-members/juran</li>
+    <li>American Society for Quality. (s. f.). <em>Philip Crosby</em>. ASQ. https://asq.org/about-asq/honorary-members/crosby</li>
+    <li>American Society for Quality. (s. f.). <em>Kaoru Ishikawa</em>. ASQ. https://asq.org/about-asq/honorary-members/ishikawa</li>
+    <li>American Society for Quality. (s. f.). <em>A. V. Feigenbaum</em>. ASQ. https://asq.org/about-asq/honorary-members/feigenbaum</li>
+    <li>American Society for Quality. (s. f.). <em>Genichi Taguchi</em>. ASQ. https://asq.org/about-asq/honorary-members/taguchi</li>
+    <li>American Society for Quality. (s. f.). <em>Harold F. Dodge</em>. ASQ. https://asq.org/about-asq/honorary-members/dodge</li>
+    <li>American Society for Quality. (s. f.). <em>Eugene L. Grant</em>. ASQ. https://asq.org/about-asq/honorary-members/grant</li>
+    <li>American Society for Quality. (s. f.). <em>Dorian Shainin</em>. ASQ. https://asq.org/about-asq/honorary-members/shainin</li>
+    <li>The W. Edwards Deming Institute. (s. f.). <em>About Dr. W. Edwards Deming</em>. https://deming.org/learn/about-dr-deming/</li>
+    <li>The W. Edwards Deming Institute. (s. f.). <em>Dr. Deming’s 14 points for management</em>. https://deming.org/explore/fourteen-points/</li>
+    <li>Shingo Institute. (s. f.). <em>About the Shingo Institute</em>. Utah State University. https://shingo.org/about-the-shingo-institute/</li>
+    <li>Toyota Motor Corporation. (s. f.). <em>Toyota Production System: Basic concept of the Toyota Production System</em>. https://www.toyota-global.com/company/history_of_toyota/75years/data/automotive_business/production/system/change.html</li>
+    <li>Automotive Hall of Fame. (s. f.). <em>Taiichi Ohno</em>. https://automotivehalloffame.org/honoree/taiichi-ohno/</li>
+    <li>Kaizen Institute. (s. f.). <em>Mr. Imai brought the Kaizen philosophy to a global audience</em>. https://kaizen.com/masaaki-imai/</li>
+    <li>Kaizen Institute. (2022). <em>Masaaki Imai awarded with “The BrandLaureate Legendary Award”</em>. https://kaizen.com/news/masaaki-imai-awarded-with-the-brand-laureate-legendary-award/</li>
+    <li>Feigenbaum Foundation. (s. f.). <em>Dr. Armand V. Feigenbaum</em>. https://www.feigenbaumfoundation.org/about/dr-armand-v-feigenbaum/</li>
+    <li>Hoyer, R. W., &amp; Hoyer, B. B. Y. (2001). What is quality? <em>Quality Progress, 34</em>(7), 53–62. American Society for Quality. https://asq.org/quality-progress/articles/what-is-quality?id=3944a2adfd33497bb8c5a7a59acf759c</li>
+  </ol>
+  <p class="note">Fecha de consulta: 2 de septiembre de 2026. Las fuentes institucionales fueron priorizadas para comprobar biografías, aportaciones y reconocimientos; el contenido de la página es una síntesis académica, no una transcripción literal de las fuentes.</p>
+</section>
+
+<section id="autor">
+  <h2 class="section-title">Autoría</h2>
+  <div class="panel">
+    <p><strong>Proyecto:</strong> Desarrollo de una página web — Precursores de la Calidad</p>
+    <p><strong>Materia:</strong> Gestión de Sistemas de Calidad</p>
+    <p><strong>Integrantes:</strong></p>
+    <ol>
+      <li>Eamy Vanessa Rangel Gómez</li>
+      <li>Laila Alexandra Castillo Avila</li>
+      <li>David Alejandro Garza Herrera</li>
+      <li>Melanie Solorzano Moreno</li>
+      <li>Mario Gael Reyes Rodríguez</li>
+    </ol>
+    <p><strong>Grupo:</strong> __________ &nbsp;&nbsp; <strong>Fecha de entrega:</strong> 14 de septiembre de 2026</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <strong>Precursores de la Calidad</strong>
+    <p>Proyecto académico de Ingeniería Industrial. Página diseñada con navegación sencilla, buscador, estructura responsive y elementos de accesibilidad.</p>
+  </div>
+</footer>
+
+<script>
+function filtrar(){
+  const q=document.getElementById('busqueda').value.toLowerCase().trim();
+  const cards=[...document.querySelectorAll('#cards .card')];
+  let visibles=0;
+  cards.forEach(card=>{
+    const ok=card.dataset.search.includes(q) || q==='';
+    card.style.display=ok?'flex':'none';
+    if(ok) visibles++;
+  });
+  document.getElementById('sin-resultados').hidden=visibles!==0;
+}
+document.getElementById('busqueda').addEventListener('input',filtrar);
+document.getElementById('busqueda').addEventListener('keydown',e=>{if(e.key==='Enter')filtrar()});
+</script>
+</body>
+</html>
